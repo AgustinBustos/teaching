@@ -1,0 +1,13 @@
+# create a vim buffer that doesnt save to disk
+:new | setlocal buftype=nofile bufhidden=hide noswapfile
+
+#put $ at the end of the file to stop the read, copy that in the clipboard and put it in:
+read -s -d "$" secretvar
+
+#then
+echo $secretvar | gpg -c > meetlinks.txt 
+
+#and thats it
+
+# for decrypt
+gpg -d meetlinks.txt | vim -c 'setlocal buftype=nofile bufhidden=hide noswapfile'
