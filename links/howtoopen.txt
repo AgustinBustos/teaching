@@ -11,3 +11,10 @@ echo $secretvar | gpg -c > meetlinks.txt
 
 # for decrypt
 gpg -d meetlinks.txt | vim -c 'setlocal buftype=nofile bufhidden=hide noswapfile'
+
+
+# now how to encrypt full dirs
+first tar czf my_folder.tar.gz my_directory/
+
+#then gpg
+gpg -c my_folder.tar.gz  > myfolder.txt 
