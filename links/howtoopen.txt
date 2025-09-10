@@ -17,4 +17,4 @@ gpg -d meetlinks.txt | vim -c 'setlocal buftype=nofile bufhidden=hide noswapfile
 first tar czf my_folder.tar.gz my_directory/
 
 #then gpg
-gpg -c my_folder.tar.gz  > myfolder.txt 
+gpg -c my_folder.tar.gz
