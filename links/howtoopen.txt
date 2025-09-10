@@ -18,3 +18,7 @@ first tar czf my_folder.tar.gz my_directory/
 
 #then gpg
 gpg -c my_folder.tar.gz
+
+#to extract
+gpg -d my_folder.tar.gz.gpg > my_folder.tar.gz
+
