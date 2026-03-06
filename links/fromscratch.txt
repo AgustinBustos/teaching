@@ -1,0 +1,15 @@
+#from scratch:
+git clone https://github.com/AgustinBustos/teaching.git
+
+gpg -d teaching/links/morelinks.txt > private.key
+
+#delete things
+
+gpg --import private.key
+gpg --list-secret-keys
+
+pass init agustinbustosbarton@gmail.com
+
+sudo apt install pass-otp
+rm -rf ~/.password-store
+git clone https://github.com/AgustinBustos/more_teaching.git ~/.password-store
